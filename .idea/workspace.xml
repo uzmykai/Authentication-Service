@@ -5,29 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="efa019e9-7390-48d4-a547-9ffe6e7e577d" name="Changes" comment="jwt impl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/controller/ApiAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/model/enums/SystemPermissions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/model/enums/SystemRoles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/model/response/BaseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/repository/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/security/CustomAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/uz/utility/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/uz/AuthenticationServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/config/JWTAuthenticationFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/model/request/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/model/request/SignUpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/service/AuthenticateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/service/AuthenticateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/service/JWTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/security/JWTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/service/impl/AuthenticateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/service/impl/AuthenticateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/service/impl/JWTServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/security/JwtServiceImpl/JWTServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/uz/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uz/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
