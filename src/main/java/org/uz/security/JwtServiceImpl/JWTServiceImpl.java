@@ -1,4 +1,4 @@
-package org.uz.service.impl;
+package org.uz.security.JwtServiceImpl;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -7,7 +7,7 @@ import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import org.uz.service.JWTService;
+import org.uz.security.JWTService;
 
 import java.security.Key;
 import java.util.Date;
@@ -19,18 +19,20 @@ public class JWTServiceImpl implements JWTService {
 
     @Override
     public String generateToken(UserDetails userDetails){
+        Date issueAt = new Date();
         return Jwts.builder().setSubject(userDetails.getUsername())
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 + 60 + 24))
+                .setIssuedAt(issueAt)
+                .setExpiration(new Date(issueAt.getTime() + 20 * 60 * 1000))
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
 
     @Override
     public String generateRefreshToken(HashMap<String, Object> extractClaims, UserDetails userDetails){
+        Date issueAt = new Date();
         return Jwts.builder().setClaims(extractClaims).setSubject(userDetails.getUsername())
-                .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 3600000))
+                .setIssuedAt(issueAt)
+                .setExpiration(new Date(issueAt.getTime() + 20 * 60 * 1000))
                 .signWith(getSignKey(), SignatureAlgorithm.HS256)
                 .compact();
     }

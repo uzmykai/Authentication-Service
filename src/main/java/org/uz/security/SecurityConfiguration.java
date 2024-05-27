@@ -1,6 +1,7 @@
-package org.uz.config;
+package org.uz.security;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,22 +23,24 @@ import org.uz.service.UserService;
 @EnableWebSecurity
 @RequiredArgsConstructor
 public class SecurityConfiguration {
-
-    private  final JWTAuthenticationFilter jwtAuthenticationFilter;
+    @Autowired
+    CustomAuthenticationFilter customAuthenticationFilter;
 
     private final UserService userService;
 
+    private final String[] WHITELIST_ENDPOINTS = {"api/v1/auth/**","/api/v1/actuator"};
     @Bean
     public SecurityFilterChain securityFilterChain(
             HttpSecurity  http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(request -> request.requestMatchers(new AntPathRequestMatcher("api/v1/auth/**"))
+                .authorizeHttpRequests(request -> request.requestMatchers(
+                        WHITELIST_ENDPOINTS
+                        )
                         .permitAll()
                         .anyRequest().authenticated())
                 .sessionManagement(manager -> manager.sessionCreationPolicy(
                         SessionCreationPolicy.STATELESS))
-                .authenticationProvider(authenticationProvider()).addFilterBefore(
-                        jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(customAuthenticationFilter,UsernamePasswordAuthenticationFilter.class);
                 return http.build();
     }
 

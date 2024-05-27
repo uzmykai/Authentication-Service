@@ -1,4 +1,4 @@
-package org.uz.service;
+package org.uz.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
 import org.uz.model.User;
